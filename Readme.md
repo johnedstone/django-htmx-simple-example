@@ -12,7 +12,13 @@ django-admin runserver --pythonpath=. --settings=tinyapp
 
 * [https://github.com/chriswedgwood/django-htmx-examples/tree/main/django_htmx_examples](https://github.com/chriswedgwood/django-htmx-examples/tree/main/django_htmx_examples)
 * [https://dev.to/arthurobo/django-htmx-load-more-objects-3jg3](https://dev.to/arthurobo/django-htmx-load-more-objects-3jg3)
-_Used Bootstrap CSS for styling this project_
 
+_Bootstrap CSS styling from this project_
+
+* [https://htmx.org/examples/animations/](https://htmx.org/examples/animations/)
+* [https://htmx.org/attributes/hx-trigger/](https://htmx.org/attributes/hx-trigger/)
 * [https://htmx.org/examples/lazy-load/](https://htmx.org/examples/lazy-load/)
+* [https://htmx.org/attributes/hx-swap/](https://htmx.org/attributes/hx-swap/)
+* [https://hypermedia.systems/deep-htmx/](https://hypermedia.systems/deep-htmx/)
+* [https://stackoverflow.com/questions/9629346/difference-between-css3-transitions-ease-in-and-ease-out](https://stackoverflow.com/questions/9629346/difference-between-css3-transitions-ease-in-and-ease-out)
 * [https://livebook.manning.com/book/django-in-action/chapter-12/v-6/14](https://livebook.manning.com/book/django-in-action/chapter-12/v-6/14)
