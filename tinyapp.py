@@ -60,7 +60,7 @@ def home(request):
 
 @render(template_name='partial_attendees.html')
 def attendees(request):
-    attendees='Two Thousand'
+    attendees={'children': 10, 'adults': 4}
     return locals()
 
 

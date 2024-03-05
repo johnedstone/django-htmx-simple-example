@@ -1,3 +1,14 @@
-<div class="container-sm partial">
-  <h4>{{ attendees }}</h4>
+<div class="attendees">
+  <ul class="list-group list-group-flush">
+  {% for key,value in attendees.items %}
+  <li class="list-group-item">{{ key }}: {{ value }}</li>
+  {% endfor%}
+  </ul>
 </div>
+{% comment %}
+  https://getbootstrap.com/docs/5.3/components/list-group/#basic-example
+{% endcomment %}
+
+<!---
+# vim: ai et ts=2 sw=2 sts=2 nu
+->

@@ -12,28 +12,38 @@
 
   <title>Latest Data</title>
 
-</head>
-
-<body>
-
   <style>
+    /*
     .centralize-div {
       display: flex !important;
       justify-content: center !important;
     }
-    /*
-    .htmx-settling img, .partial {
+    */
+
+    {% comment %}
+      https://htmx.org/examples/animations/
+    {% endcomment %}
+    .attendees.htmx-added {
       opacity: 0;
     }
-    img, .partial {
-     transition: opacity 300ms ease-in;
+    .attendees {
+      opacity: 1; 
+      transition: opacity 2s ease-in;
+      color: purple;
     }
-    */
-    div.partial {
-      transition: all ease-in 30s;
-      color: red;
+    .left-edge {
+      margin-left: 0!important;
+      margin-right: 0!important;
+    }
+    .list-group-item {
+      color: purple;
     }
   </style>
+
+
+</head>
+
+<body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -52,14 +62,22 @@
     </div>
   </nav>
 
-  <div class="container">
-    <div class="callout">Number of attendees</div>
-    <div hx-get="/latest-data/attendees/" hx-trigger="load">
-      <img  alt="Result loading..." class="xhtmx-indicator" width="150" src="{% static 'bars.svg' %}"/>
-  </div>
   {% comment %}
+    https://htmx.org/examples/animations/
   {% endcomment %}
+  <div class="container left-edge">
+    <div class="callout">Number of attendees</div>
+    <div class="attendees" hx-get="/latest-data/attendees/" hx-trigger="load delay:1s" hx-swap="outerHTML settle:100ms">
+      <img  alt="Result loading..." width="50" src="{% static 'bars.svg' %}"/>
+    </div>
+  </div>
 
+  <div class="container left-edge">
+    <div class="callout">Number of attendees: Take two</div>
+    <div class="attendees" hx-get="/latest-data/attendees/" hx-trigger="load delay:2s" hx-swap="outerHTML settle:100ms">
+      <img  alt="Result loading..." width="50" src="{% static 'bars.svg' %}"/>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
