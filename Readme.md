@@ -11,9 +11,8 @@ django-admin runserver --pythonpath=. --settings=tinyapp
 ```
 
 * [https://github.com/chriswedgwood/django-htmx-examples/tree/main/django_htmx_examples](https://github.com/chriswedgwood/django-htmx-examples/tree/main/django_htmx_examples)
-* [https://dev.to/arthurobo/django-htmx-load-more-objects-3jg3](https://dev.to/arthurobo/django-htmx-load-more-objects-3jg3)
-
-_Bootstrap CSS styling from this project_
+* [https://dev.to/arthurobo/django-htmx-load-more-objects-3jg3](https://dev.to/arthurobo/django-htmx-load-more-objects-3jg3):
+ _Bootstrap CSS styling from this project_
 
 * [https://htmx.org/examples/animations/](https://htmx.org/examples/animations/)
 * [https://htmx.org/attributes/hx-trigger/](https://htmx.org/attributes/hx-trigger/)
