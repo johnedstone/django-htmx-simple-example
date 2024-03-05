@@ -1,3 +1,7 @@
+### History
+* 04-Mar-2024: (git commit: 2b2efcc) Simplest example of simple django (tinyapp) with htmx with animation
+* To Do: pull live data from REST API and display with htmx
+
 ### Run this app
 ```
 django-admin runserver --pythonpath=. --settings=tinyapp
