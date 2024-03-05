@@ -1,5 +1,5 @@
 ### History
-* 04-Mar-2024: (git commit: 2b2efcc) Simplest example of simple django (tinyapp) with htmx with animation
+* 04-Mar-2024: (git commit: 6e01aef) Simplest example of simple django (tinyapp) with htmx with animation
 * To Do: pull live data from REST API and display with htmx
 
 ### Run this app
