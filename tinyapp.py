@@ -11,6 +11,7 @@ load_dotenv()
 DEBUG = os.getenv('DEBUG', 'yes') == 'yes'
 SECRET_KEY = os.getenv('SECRET_KEY', secrets.token_urlsafe(32))
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
+SECURE_SSL_REDIRECT = os.getenv('SECURE_SSL_REDIRECT', 'no') == 'yes' 
 
 logging.debug(f'SECRET_KEY: {SECRET_KEY}')
 logging.debug(f'ALLOWED_HOSTS: {ALLOWED_HOSTS}')
