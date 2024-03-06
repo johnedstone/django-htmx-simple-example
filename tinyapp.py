@@ -5,13 +5,16 @@ from datetime import datetime
 
 from django.urls import re_path
 from django.shortcuts import redirect, render as django_render
+from dotenv import load_dotenv
+load_dotenv()
 
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'yes') == 'yes'
 SECRET_KEY = os.getenv('SECRET_KEY', secrets.token_urlsafe(32))
-if not DEBUG:
-    ALLOWED_HOSTS = ['*',]
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
 
 logging.debug(f'SECRET_KEY: {SECRET_KEY}')
+logging.debug(f'ALLOWED_HOSTS: {ALLOWED_HOSTS}')
+logging.debug(f'DEBUG: {DEBUG}')
 
 ROOT_URLCONF = __name__
 
@@ -75,4 +78,5 @@ STORAGES = {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
+
 # vim: ai et ts=4 sw=4 sts=4 nu

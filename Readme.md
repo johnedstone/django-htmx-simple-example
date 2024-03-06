@@ -25,3 +25,11 @@ django-admin runserver --pythonpath=. --settings=tinyapp
 * [https://hypermedia.systems/deep-htmx/](https://hypermedia.systems/deep-htmx/)
 * [https://stackoverflow.com/questions/9629346/difference-between-css3-transitions-ease-in-and-ease-out](https://stackoverflow.com/questions/9629346/difference-between-css3-transitions-ease-in-and-ease-out)
 * [https://livebook.manning.com/book/django-in-action/chapter-12/v-6/14](https://livebook.manning.com/book/django-in-action/chapter-12/v-6/14)
+
+### Deploying after git commit: 6e01aef
+* Installed on ec2 with this [ansible playbook](https://github.com/johnedstone/ansible-postgres-nginx-django) using these commands:
+```
+ansible-playbook --tags gunicorn-setup,letsencrypt --flush-cache --diff -i inventory.ini playbook.yaml
+```
+
+* Added wsgi.py and change running to `gunicorn --env DJANGO_SETTINGS_MODULE=tinyapp wsgi`, updated systemd files and set `INSTALL_SYSTEMD_FILES: false` in `ansible_private_vars.yaml`
